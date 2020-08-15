@@ -4,9 +4,20 @@ except ImportError:
     import Image
 import pytesseract
 import os
-
+from sys import platform
 import cv2
-pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
+import json
+
+#Configurations
+#Load config based on OS
+if platform == "linux" or platform == "linux2":
+    with open("lin_config.json") as json_data_file:
+        data = json.load(json_data_file)
+elif platform == "win32":
+    with open("win_config.json") as json_data_file:
+        data = json.load(json_data_file)
+
+pytesseract.pytesseract.tesseract_cmd = data["tesseract_path"]
 image_path = "C:\\projects\\ocr-component\\raw_img\\day_no.png"
 current_path = os.getcwd()
 

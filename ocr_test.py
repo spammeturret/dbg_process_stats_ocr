@@ -12,7 +12,6 @@ current_path = os.getcwd()
 
 def read_image(image_path, threshold):
     tmp_file_path = os.getcwd() + "\\temp.png"
-    # tmp_file_path.replace('\', "\\")
     originalImage = cv2.imread(image_path)
     grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
     (thresh, blackAndWhiteImage) = cv2.threshold(grayImage, threshold, 255, cv2.THRESH_BINARY)
