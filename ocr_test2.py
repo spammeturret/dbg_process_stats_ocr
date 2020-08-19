@@ -18,11 +18,11 @@ elif platform == "win32":
         data = json.load(json_data_file)
 
 pytesseract.pytesseract.tesseract_cmd = data["tesseract_path"]
-image_path = "C:\\projects\\ocr-component\\raw_img\\day_no.png"
+image_path = data["test_img"]
 current_path = os.getcwd()
 
 def read_image(image_path, threshold):
-    tmp_file_path = "C:\\projects\\ocr-component\\raw_img\\temp.png"
+    tmp_file_path = data["test_img"]
     # tmp_file_path.replace('\', "\\")
     originalImage = cv2.imread(image_path)
     grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)

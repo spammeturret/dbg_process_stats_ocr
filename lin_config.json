@@ -1,4 +1,5 @@
 {
     "tesseract_path":"/bin/tesseract",
-    "test_img":"/home/Hiny/projects/ocr-component"
+    "test_img":"/home/Hiny/projects/ocr-component/raw_image/ticket_no.png",
+    "temp_dir": "/home/Hiny/projects/ocr-component/raw_image/temp.png"
 }

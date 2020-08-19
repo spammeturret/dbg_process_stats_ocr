@@ -1,0 +1,12 @@
+#! /bin/bash
+sudo yum -y update
+sudo yum -y install centos-release-scl
+sudo yum -y install rh-python36
+scl enable rh-python36 bash
+sudo yum -y install git
+sudo yum -y install python-pip
+pip install --upgrade pip
+mkdir /home/Hiny/projects
+git clone https://github.com/spammeturret/ocr-component /home/Hiny/projects/ocr-component
+pip install -r /home/Hiny/projects/ocr-component/requirements.txt
+yum install -y tesseract
