@@ -23,7 +23,7 @@ image_path = data["test_img"]
 current_path = os.getcwd()
 
 def read_image(image_path, threshold):
-    tmp_file_path = data["test_dir"]
+    tmp_file_path = data["temp_dir"]
     # tmp_file_path.replace('\', "\\")
     originalImage = cv2.imread(image_path)
     grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
