@@ -18,6 +18,7 @@ elif platform == "win32":
         data = json.load(json_data_file)
 
 pytesseract.pytesseract.tesseract_cmd = data["tesseract_path"]
+
 image_path = data["test_img"]
 current_path = os.getcwd()
 
