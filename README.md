@@ -6,6 +6,10 @@ This solution leverages off the Google Cloud Platform and its machine learning s
 * Google Vision
 * Google Sheets
 
+## Motivation
+A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+
+
 ## Pre-requisites
 1. A google cloud account created
 2. Enable API Functionalities for the following GCP services:
@@ -18,31 +22,40 @@ This solution leverages off the Google Cloud Platform and its machine learning s
 
 
 ## Installation
-1. Pull the repository to your local machine in a project directory:
+1. **Pull the repository to your local machine in a project directory:**
 ```
 git clone https://github.com/spammeturret/dbg_process_stats_ocr
 ```
 1. Update the configuration section of each script in the following:
-   * ocr-component/google functions/main.py
-  
-   
-2. Run the following command to create a new Google Cloud Function
+   * /root/project/dbg_process_stats_ocr/google functions/main.py (Line 13-21)
+
+2. Navigate to your project directory, where your main.py file is.
+```
+cd /root/project/dbg_process_stats_ocr/google functions/main.py
+```
+3. Run the following command to create a new Google Cloud Function
 ```
 gcloud functions deploy process_stats \
 --runtime python37 --trigger-http
 ```
 
-*Create a service account with the following role:
-* Cloud Functions Invoker
-1. You need to download service account credentials (.json file) onto your desktop and use it to generate an ID token.
-
 ## Usage
-Project title
+To call the function, you'll need the following:
+1. ID Token in the HTTP request header to authenticate with GCP.
+2. Image to be encoded in Base64 format
 
-A little info about your project and/ or overview that explains what the project is about.
+To create the ID token, do the following
+Update the configuration section of each script in the following
+* /root/project/dbg_process_stats_ocr/google functions/gcloud-id-token.py (Line 10-12)
 
-## Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+Run the python file to print out your ID Token.
+'''
+'''
+You can use Postman or Python to invoke the Google Cloud Function.
+###Postman
+
+
+
 
 ## Build status
 Build status of continus integration i.e. travis, appveyor etc. Ex. -
