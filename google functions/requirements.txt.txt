@@ -1,0 +1,9 @@
+# Function dependencies, for example:
+# package>=version
+google-api-core
+google-api-python-client
+google-auth
+google-auth-httplib2
+google-cloud-core
+google-cloud-vision
+pytz
