@@ -31,11 +31,12 @@ def VerifyIDToken(token, audience=None):
   Output: True if token is still valid, False if invalid
   """
   certs_url='https://www.googleapis.com/oauth2/v1/certs'
-
   request = google.auth.transport.requests.Request()
   result = id_token.verify_token(token,request,certs_url=certs_url)
   if audience in result['aud']:
     return True
   return False
 
-print(GetIDTokenFromServiceAccount(svcAccountFile, target_audience))
+#Execute this script just to test out ID token generation
+if __name__ == "__main__":
+  print("New Token ID is: \n \n"+GetIDTokenFromServiceAccount(svcAccountFile, target_audience))

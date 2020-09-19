@@ -78,3 +78,8 @@ def process_dbg_stat(request):
     insert_gsheets(arr)
 
     return "DONE"
+
+
+
+    # else:
+    #     return f'Hello World!'
