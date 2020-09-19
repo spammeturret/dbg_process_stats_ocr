@@ -1,4 +1,4 @@
-# dbg_process_stats_ocr
+# OCR Stat Processing - DBG
 Optical character recognition component for DBG_Automation
 As a part of the DBG game automation project, we want to implement features to capture game statistics and collate it in a database structure.
 This solution leverages off the Google Cloud Platform and its machine learning services as a part of its architecture, including:
