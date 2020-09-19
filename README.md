@@ -22,31 +22,34 @@ A short description of the motivation behind the creation and maintenance of the
 
 
 ## Installation
-1. **Pull the repository to your local machine in a project directory:**
+**1. Pull the repository to your local machine in a project directory:**
 ```
 git clone https://github.com/spammeturret/dbg_process_stats_ocr
 ```
-1. Update the configuration section of each script in the following:
-   * /root/project/dbg_process_stats_ocr/google functions/main.py (Line 13-21)
-
-2. Navigate to your project directory, where your main.py file is.
+**2. Update the configuration section of each script in the following:**
+```
+   /root/project/dbg_process_stats_ocr/google functions/main.py (Line 13-21)
+```
+**3. Navigate to your project directory, where your main.py file is.**
 ```
 cd /root/project/dbg_process_stats_ocr/google functions/main.py
 ```
-3. Run the following command to create a new Google Cloud Function
+**4. Run the following command to create a new Google Cloud Function**
 ```
 gcloud functions deploy process_stats \
 --runtime python37 --trigger-http
 ```
 
 ## Usage
-To call the function, you'll need the following:
-1. ID Token in the HTTP request header to authenticate with GCP.
+Function is triggered via HTTP, you'll need the following in your request:
+1. ID Token in the header to for authentication.
 2. Image to be encoded in Base64 format
 
-To create the ID token, do the following
+**1. To create the ID token, do the following**
 Update the configuration section of each script in the following
-* /root/project/dbg_process_stats_ocr/google functions/gcloud-id-token.py (Line 10-12)
+```
+/root/project/dbg_process_stats_ocr/google functions/gcloud-id-token.py (Line 10-12)
+```
 
 Run the python file to print out your ID Token.
 '''
