@@ -7,8 +7,7 @@ This solution leverages off the Google Cloud Platform and its machine learning s
 * Google Sheets
 
 ## Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
-
+The current game automation bot currently lack any monitoring and alerting capabilities on the status of its operation. With this solution, we can track all ongoing game statistics as well as to understand when the bot last completed a game loop. Currently, we can track skills and progression statistics throughout each cycle, allowing us to perform trend analysis on the data to understand the most effective way to play the game.
 
 ## Pre-requisites
 1. A google cloud account created
